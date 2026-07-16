@@ -359,7 +359,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   }, []);
 
   return (
-    <ProtectedRoute>
+    <ProtectedRoute requiredRole="admin">
       <div className="min-h-screen bg-background">
         <AdminSidebar collapsed={collapsed} onToggle={() => setCollapsed(!collapsed)} />
 
